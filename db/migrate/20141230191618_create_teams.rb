@@ -4,6 +4,7 @@ class CreateTeams < ActiveRecord::Migration
       t.belongs_to :league
       t.belongs_to :club
       
+      t.string :name
       t.integer :age
       t.string :coach
       t.integer :rank
