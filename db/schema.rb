@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 20141230192030) do
   create_table "teams", force: true do |t|
     t.integer  "league_id"
     t.integer  "club_id"
+    t.string   "name"
     t.integer  "age"
     t.string   "coach"
     t.integer  "rank"

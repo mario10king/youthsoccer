@@ -2,3 +2,8 @@
 	<%= select_tag(:age, options_for_select([8,9,10,11,12,13,14,15,16,17])) %>
 	<%= submit_tag("Rankings") %>
 <% end %>
+<ol>
+	<% @name.each do |name| %>
+		<li><%= name %></li>
+ 	<% end %>
+</ol>
