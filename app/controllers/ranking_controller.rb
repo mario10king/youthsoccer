@@ -5,6 +5,7 @@ class RankingController < ApplicationController
   def teams
   end
   def ranking
+    @age = params[:age]
     if params[:league] == "coast"
       puts "***************"
       coast 
@@ -15,9 +16,8 @@ class RankingController < ApplicationController
     
   end
   def coast
-    sorted = []
     squad = []
-    @age = params[:age]
+    
     age = @age
     gender = {boys: "SB", girls: "SG"} 
     bracket = {pr: "0P", g: "1G", gn: "1N", gs: "1S", ses: "S1", sen: "S2", sew: "S3", see: "S4", 
@@ -1328,10 +1328,100 @@ g_19 = []
   end
   end
 arr = []
-b_16.each do |team|
+p @age
+case @age.to_i
+  when 11
+  b_11.each do |team|
  av = team["tgnm"].split(" ")
   arr << [team["tmnm"],team["AVG_PTS_PER_GM"].to_f - (av[4].to_i)]
 end
+  when 12
+  b_12.each do |team|
+ av = team["tgnm"].split(" ")
+  arr << [team["tmnm"],team["AVG_PTS_PER_GM"].to_f - (av[4].to_i)]
+end
+  when 13
+  b_13.each do |team|
+ av = team["tgnm"].split(" ")
+  arr << [team["tmnm"],team["AVG_PTS_PER_GM"].to_f - (av[4].to_i)]
+end
+  when 14
+  b_14.each do |team|
+ av = team["tgnm"].split(" ")
+  arr << [team["tmnm"],team["AVG_PTS_PER_GM"].to_f - (av[4].to_i)]
+end
+  when 15
+  b_15.each do |team|
+ av = team["tgnm"].split(" ")
+  arr << [team["tmnm"],team["AVG_PTS_PER_GM"].to_f - (av[4].to_i)]
+end
+  when 16
+  b_16.each do |team|
+  av = team["tgnm"].split(" ")
+  arr << [team["tmnm"],team["AVG_PTS_PER_GM"].to_f - (av[4].to_i)]
+end
+  when 17
+  b_17.each do |team|
+ av = team["tgnm"].split(" ")
+  arr << [team["tmnm"],team["AVG_PTS_PER_GM"].to_f - (av[4].to_i)]
+end
+  when 18
+  b_18.each do |team|
+ av = team["tgnm"].split(" ")
+  arr << [team["tmnm"],team["AVG_PTS_PER_GM"].to_f - (av[4].to_i)]
+end
+  when 19
+  b_19.each do |team|
+ av = team["tgnm"].split(" ")
+  arr << [team["tmnm"],team["AVG_PTS_PER_GM"].to_f - (av[4].to_i)]
+end
+  when 'g_11'
+  g_11.each do |team|
+ av = team["tgnm"].split(" ")
+  arr << [team["tmnm"],team["AVG_PTS_PER_GM"].to_f - (av[4].to_i)]
+end
+  when 'g_12'
+  g_12.each do |team|
+ av = team["tgnm"].split(" ")
+  arr << [team["tmnm"],team["AVG_PTS_PER_GM"].to_f - (av[4].to_i)]
+end
+  when 'g_13'
+  g_13.each do |team|
+ av = team["tgnm"].split(" ")
+  arr << [team["tmnm"],team["AVG_PTS_PER_GM"].to_f - (av[4].to_i)]
+end
+  when 'g_14'
+  g_14.each do |team|
+ av = team["tgnm"].split(" ")
+  arr << [team["tmnm"],team["AVG_PTS_PER_GM"].to_f - (av[4].to_i)]
+end
+  when 'g_15'
+  g_15.each do |team|
+ av = team["tgnm"].split(" ")
+  arr << [team["tmnm"],team["AVG_PTS_PER_GM"].to_f - (av[4].to_i)]
+end
+  when 'g_16'
+  g_16.each do |team|
+ av = team["tgnm"].split(" ")
+  arr << [team["tmnm"],team["AVG_PTS_PER_GM"].to_f - (av[4].to_i)]
+end
+  when 'g_17'
+  g_17.each do |team|
+ av = team["tgnm"].split(" ")
+  arr << [team["tmnm"],team["AVG_PTS_PER_GM"].to_f - (av[4].to_i)]
+end
+  when 'g_18'
+  g_18.each do |team|
+ av = team["tgnm"].split(" ")
+  arr << [team["tmnm"],team["AVG_PTS_PER_GM"].to_f - (av[4].to_i)]
+end
+  when 'g_19'
+  g_19.each do |team|
+ av = team["tgnm"].split(" ")
+  arr << [team["tmnm"],team["AVG_PTS_PER_GM"].to_f - (av[4].to_i)]
+end
+end
+
 @squad = arr.sort{|x,y| y[1] <=> x[1]}
 
 render "ranking/coast"
