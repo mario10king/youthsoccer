@@ -1,5 +1,5 @@
 <%= form_tag("/age", method: "post") do %>
 	<%= select_tag(:age, options_for_select([11,12,13,14,15,16,17])) %>
-	<%= select_tag(:league, options_for_select(["scsdl","coast"])) %>
+	<%= select_tag(:league, options_for_select(["scsdl","coast","both"])) %>
 	<%= submit_tag("Rankings") %>
 <% end %>
