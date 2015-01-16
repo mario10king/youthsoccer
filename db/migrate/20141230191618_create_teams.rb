@@ -7,7 +7,7 @@ class CreateTeams < ActiveRecord::Migration
       t.string :name
       t.integer :age
       t.string :coach
-      t.integer :rank
+      t.float :ppg
       
       t.timestamps
     end

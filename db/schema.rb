@@ -43,7 +43,7 @@ ActiveRecord::Schema.define(version: 20141230192030) do
     t.string   "name"
     t.integer  "age"
     t.string   "coach"
-    t.integer  "rank"
+    t.float    "ppg"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
