@@ -9,7 +9,7 @@ require 'nokogiri'
 require 'open-uri'
 League.create([{name: "SCSDL"},{name: "Presidio"},{name: "Coast"}])
 a = 11
-while a <= 17 /
+while a <= 17 
   squad = []
   age = a
   gender = {boys: "SB", girls: "SG"} 
