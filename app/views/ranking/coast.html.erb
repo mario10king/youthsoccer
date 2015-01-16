@@ -4,8 +4,8 @@
 	<%= submit_tag("Rankings") %>
 <% end %>
 <ol>
-	<% @squad.each do |name| %>
-		<li><%= name[0] %> </li>
+	<% @squad.each do |team| %>
+		<li><%= team.name %> </li>
  	<% end %>
 </ol>
 
