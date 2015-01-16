@@ -15,9 +15,11 @@ class RankingController < ApplicationController
     
   end
   def coast
-  
-    @squad = Team.where(age: @age).order(ppg: :desc)
-
+    @squad = []
+    teams = Team.where(age: @age).order(ppg: :desc)
+    teams.each do |team|
+      @squad << [team.name, team.ppg]
+    end
    # render 'ranking/coast'
   end
 
@@ -1373,7 +1375,8 @@ end
   end
   def both
     @ranking = []
-    coast.each do |team|
+    coast
+    @squad.each do |team|
       @ranking << team
     end
     scsdl.each do |team|
