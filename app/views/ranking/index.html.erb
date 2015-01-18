@@ -1,6 +1,6 @@
 <h1 align="center"> SoCal Youth Soccer Rankings</h1>
 
-<%= form_tag("/age", method: "post") do %>
+<%= form_tag("/ranking", method: "post") do %>
 	<%= label_tag(:age, "Select an age") %>
 	<%= select_tag(:age, options_for_select([11,12,13,14,15,16,17])) %>
 	<%= label_tag(:league, "Select a League") %>
